@@ -2,21 +2,23 @@ version: "3.9"
 
 services:
   backend:
-    build: 
-      context: . 
+    build:
+      context: .
       dockerfile: ./backend/Dockerfile
+
     container_name: backend-app
+
     ports:
-      - "8080:8080"  # Map directly to port 80
+      - "7121:80"
+
     networks:
       - app-network
-#    env_file: .env
+
     volumes:
       - ./backend:/app
       - ./frontend:/app/static
-    restart: unless-stopped
 
-# Remove the frontend service entirely
+    restart: unless-stopped
 
 networks:
   app-network:

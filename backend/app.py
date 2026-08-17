@@ -16,7 +16,7 @@ DBNAME = os.environ.get("DBNAME", "elegancechocolat")
 DBPORT = int(os.environ.get("DBPORT", 3306))
 POOLNAME = os.environ.get("DBPOOLNAME", "mypool")
 POOLSIZE = int(os.environ.get("DBPOOLSIZE", 5))
-PORT = int(os.environ.get("PORT", 8080))
+PORT = int(os.environ.get("PORT", 9090))
 
 dbpool = None
 

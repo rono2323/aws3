@@ -13,7 +13,7 @@ COPY . .
 
 COPY frontend /app/static
 # Environment variables will be injected from Terraform (via user data)
-EXPOSE 8080
+EXPOSE 9090
 
 # Use Gunicorn for production
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:9090", "app:app"]
